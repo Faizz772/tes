@@ -1,35 +1,48 @@
-# MotoShop ⚙️ — Website Store Sparepart Motor
+# SewaBot Panel ⚡ — Layanan Sewa Bot Otomatis
 
-Website e-commerce sparepart motor statis (HTML + CSS + JavaScript, tanpa framework).
+Website layanan sewa bot otomatis (WhatsApp, Telegram, Discord) — statis (HTML + CSS + JavaScript, tanpa framework), siap deploy di Vercel.
 
-## Fitur
+## Halaman
 
-- **Navbar** — logo, menu (Beranda, Produk, Harga, Dashboard, Kontak), tombol Login/Daftar
-- **Hero** — judul, subjudul, tombol "Belanja Sekarang" & "Lihat Katalog", background gradasi hijau-biru
-- **Stats Bar** — 2.500+ produk, 10.000+ pelanggan, rating 4.9, pengiriman cepat
-- **Kategori Produk** — 6 kategori (Ban & Velg, Mesin & Oli, Rem & Kopling, dll) dengan filter interaktif
-- **Produk Terlaris** — 6 kartu produk (gambar, rating, terjual, harga, tombol + Keranjang)
-- **Daftar Harga** — tabel harga 10 produk dengan filter kategori & status stok
-- **Dashboard Admin** — kartu ringkasan (omset, produk, pesanan, pelanggan), grafik penjualan mingguan, pesanan terbaru, produk stok menipis
-- **Footer** — 4 kolom (brand, navigasi, kategori, kontak)
-- Keranjang belanja + notifikasi toast, form kontak, tampilan responsif (mobile-friendly)
+- **`index.html`** — Landing page:
+  - Navbar (logo SewaBot ⚡, menu Beranda/Layanan/Harga/Panel/Kontak, tombol Login Panel & Daftar Sekarang)
+  - Hero "Sewa Bot Otomatis Terbaik & Terpercaya" (gradasi hijau-biru, mock chat bot)
+  - Stats bar: 500+ Bot Aktif | 2.000+ Pelanggan | Uptime 99.9% | Support 24/7
+  - Pilih Jenis Bot (WhatsApp, Telegram, Discord, Toko Online, Broadcast, Custom)
+  - Paket Sewa Bot: Starter Rp50rb / Bisnis Rp150rb (⭐ Populer) / Pro Rp350rb per bulan
+  - Tabel Perbandingan Lengkap Paket (12 fitur)
+  - Kontak & Support (WhatsApp 24 jam)
+  - Semua tombol sewa/paket terhubung langsung ke WhatsApp (`wa.me/6289698988955`)
+- **`panel.html`** — Panel Kontrol Bot (admin):
+  - Sidebar: Dashboard, Bot Saya, Statistik, Broadcast, Pengaturan, Langganan, Tiket Support, Logout
+  - Kartu ringkasan: Bot Aktif 3/5, 4.230 pesan/hari, 128 user, Uptime 99.8%
+  - Daftar Bot Saya (5 bot, status & aksi kelola)
+  - Grafik pesan 7 hari (SVG line chart: masuk vs keluar)
+  - Broadcast terjadwal, Tiket support, Info langganan (Perpanjang/Upgrade via WA)
+- **`kelola.html`** — Halaman kelola bot (Bot Toko Baju):
+  - Tab: Info Bot, Auto Reply (CRUD demo), Broadcast, Log Pesan, Pengaturan (switch)
 
-## Cara Menjalankan
-
-Buka `index.html` di browser, atau jalankan server statis:
+## Menjalankan
 
 ```bash
-python3 -m http.server 8000
-# lalu buka http://localhost:8000
+python3 -m http.server 8000   # buka http://localhost:8000
 ```
+
+## Deploy Vercel
+
+Sudah dikonfigurasi via `vercel.json` (clean URLs, cache asset, security headers). Import repo ini di https://vercel.com/new — atau push ke Git untuk auto-deploy.
 
 ## Struktur
 
 ```
 motoshop/
-├── index.html   # halaman utama (semua section)
-├── style.css    # styling lengkap + responsif
-└── script.js    # data produk, filter, keranjang, grafik
+├── index.html    # landing page
+├── panel.html    # panel kontrol admin
+├── kelola.html   # detail pengaturan bot
+├── style.css     # styling + responsif
+├── script.js     # chart SVG, tabs, auto-reply demo, toast
+├── vercel.json   # konfigurasi deploy Vercel
+└── README.md
 ```
 
-© 2024 MotoShop. All rights reserved.
+© 2024 SewaBot. All rights reserved.

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bot Toko Baju - Pengaturan | SewaBot</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="panel-wrap">
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar">
+    <a href="index.html" class="side-logo">SewaBot <span>⚡</span></a>
+    <nav class="side-menu">
+      <a href="panel.html">🏠 Dashboard</a>
+      <a href="panel.html#bots" class="active">🤖 Bot Saya</a>
+      <a href="panel.html#statistik">📊 Statistik</a>
+      <a href="panel.html#broadcast">📢 Broadcast</a>
+      <a href="#" data-demo="Pengaturan">⚙️ Pengaturan</a>
+      <a href="panel.html#langganan">💳 Langganan</a>
+      <a href="panel.html#tiket">🎫 Tiket Support</a>
+      <a href="index.html" class="logout">🚪 Logout</a>
+    </nav>
+    <div class="side-foot">v1.0 • Server UP 🟢</div>
+  </aside>
+
+  <!-- ===================== AREA UTAMA ===================== -->
+  <main class="panel-main">
+
+    <a class="back-link" href="panel.html#bots">← Kembali ke Panel</a>
+    <div class="bot-title-row">
+      <h1>Bot Toko Baju - Pengaturan</h1>
+      <span class="badge-st st-aktif">🟢 Aktif</span>
+      <span class="badge-st st-kirim">WhatsApp</span>
+    </div>
+
+    <!-- TABS -->
+    <div class="tabs" id="tabs">
+      <button class="tab-btn active" data-tab="info">Info Bot</button>
+      <button class="tab-btn" data-tab="autoreply">Auto Reply</button>
+      <button class="tab-btn" data-tab="broadcast">Broadcast</button>
+      <button class="tab-btn" data-tab="log">Log Pesan</button>
+      <button class="tab-btn" data-tab="setting">Pengaturan</button>
+    </div>
+
+    <!-- TAB: INFO BOT -->
+    <section class="tab-panel active" id="tab-info">
+      <div class="panel">
+        <div class="panel-head"><h3>ℹ️ Info Bot</h3></div>
+        <div class="chart-box">
+          <div class="info-grid">
+            <div class="info-item"><small>Nama Bot</small><strong>Bot Toko Baju</strong></div>
+            <div class="info-item"><small>Platform</small><strong>WhatsApp</strong></div>
+            <div class="info-item"><small>Nomor</small><strong>0812-xxxx-xxxx</strong></div>
+            <div class="info-item"><small>Prefix Command</small><strong>!</strong></div>
+            <div class="info-item"><small>Paket</small><strong>Bisnis (5 bot)</strong></div>
+            <div class="info-item"><small>Terakhir Online</small><strong>Baru saja • 🟢</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB: AUTO REPLY -->
+    <section class="tab-panel" id="tab-autoreply">
+      <div class="panel">
+        <div class="panel-head">
+          <h3>💬 Auto Reply</h3>
+          <span class="panel-note">4 kata kunci aktif</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>KATA KUNCI</th><th>BALASAN OTOMATIS</th><th>AKSI</th></tr>
+            </thead>
+            <tbody id="kwBody">
+              <tr>
+                <td><strong>harga, price</strong></td>
+                <td>"Halo! Cek katalog di bit.ly/..."</td>
+                <td>
+                  <button class="btn btn-ghost border btn-sm" data-kw-edit>Edit</button>
+                  <button class="btn btn-ghost border btn-sm" data-kw-del>Hapus</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>order, pesan</strong></td>
+                <td>"Silakan isi form order: ..."</td>
+                <td>
+                  <button class="btn btn-ghost border btn-sm" data-kw-edit>Edit</button>
+                  <button class="btn btn-ghost border btn-sm" data-kw-del>Hapus</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>lokasi, alamat</strong></td>
+                <td>"Kami di Jl. Merdeka No.10 ..."</td>
+                <td>
+                  <button class="btn btn-ghost border btn-sm" data-kw-edit>Edit</button>
+                  <button class="btn btn-ghost border btn-sm" data-kw-del>Hapus</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>jam buka</strong></td>
+                <td>"Buka Senin-Sabtu 09.00-21.00"</td>
+                <td>
+                  <button class="btn btn-ghost border btn-sm" data-kw-edit>Edit</button>
+                  <button class="btn btn-ghost border btn-sm" data-kw-del>Hapus</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="add-row-bar">
+          <input id="kwInput" type="text" placeholder="Kata kunci baru (pisahkan dengan koma)...">
+          <input id="kwReply" type="text" placeholder="Balasan otomatis...">
+          <button class="btn btn-primary btn-sm" id="kwAdd">+ Tambah Auto Reply</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB: BROADCAST -->
+    <section class="tab-panel" id="tab-broadcast">
+      <div class="panel">
+        <div class="panel-head">
+          <h3>📢 Broadcast Bot Ini</h3>
+          <button class="btn btn-primary btn-sm" data-demo="Broadcast Baru">+ Broadcast Baru</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>JUDUL</th><th>TARGET</th><th>JADWAL</th><th>STATUS</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Promo Akhir Bulan</strong></td><td>532 kontak</td><td>13 Okt 08.00</td>
+                <td><span class="badge-st st-proses">⏳ Pending</span></td>
+              </tr>
+              <tr>
+                <td><strong>Pengingat Pembayaran</strong></td><td>89 kontak</td><td>12 Okt 19.00</td>
+                <td><span class="badge-st st-ok">✅ Terkirim</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB: LOG PESAN -->
+    <section class="tab-panel" id="tab-log">
+      <div class="panel">
+        <div class="panel-head">
+          <h3>📜 Log Pesan</h3>
+          <span class="panel-note">100 pesan terakhir • auto-refresh</span>
+        </div>
+        <ul class="log-list">
+          <li><span class="log-time">12 Okt 14:32</span><span class="log-tag in">MASUK</span><span>"kak masih ready gamis navy?"</span></li>
+          <li><span class="log-time">12 Okt 14:32</span><span class="log-tag out">KELUAR</span><span>Auto reply: "Ready kak! Cek katalog di bit.ly/..."</span></li>
+          <li><span class="log-time">12 Okt 14:10</span><span class="log-tag in">MASUK</span><span>"harga hijab voal berapa?"</span></li>
+          <li><span class="log-time">12 Okt 14:10</span><span class="log-tag out">KELUAR</span><span>Auto reply: "Halo! Cek katalog di bit.ly/..."</span></li>
+          <li><span class="log-time">12 Okt 13:55</span><span class="log-tag in">MASUK</span><span>"buka sampai jam berapa?"</span></li>
+          <li><span class="log-time">12 Okt 13:55</span><span class="log-tag out">KELUAR</span><span>Auto reply: "Buka Senin-Sabtu 09.00-21.00"</span></li>
+          <li><span class="log-time">12 Okt 13:20</span><span class="log-tag out">KELUAR</span><span>Broadcast: "Promo Akhir Bulan 🎉" → 532 kontak</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TAB: PENGATURAN -->
+    <section class="tab-panel" id="tab-setting">
+      <div class="panel">
+        <div class="panel-head"><h3>⚙️ Pengaturan Bot</h3></div>
+        <div class="setting-row">
+          <div><strong>Auto Restart</strong><small>Restart bot otomatis jika disconnect</small></div>
+          <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+        </div>
+        <div class="setting-row">
+          <div><strong>Anti Banned Protection</strong><small>Batas aman pengiriman pesan per menit</small></div>
+          <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+        </div>
+        <div class="setting-row">
+          <div><strong>Notifikasi WhatsApp</strong><small>Kirim laporan harian ke nomor admin</small></div>
+          <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+        </div>
+        <div class="setting-row">
+          <div><strong>Mode Malam (Do Not Disturb)</strong><small>Menahan balasan otomatis jam 22.00 - 07.00</small></div>
+          <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+        </div>
+        <div class="add-row-bar">
+          <button class="btn btn-primary btn-sm" data-demo="Simpan Pengaturan">💾 Simpan Perubahan</button>
+          <a class="btn btn-wa btn-sm" href="https://wa.me/6289698988955?text=Halo,%20saya%20butuh%20bantuan%20support." target="_blank" rel="noopener">💬 Butuh Bantuan?</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<div class="toast" id="toast">✅ Berhasil</div>
+<script src="script.js"></script>
+</body>
+</html>

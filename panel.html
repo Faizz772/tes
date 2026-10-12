@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel Kontrol Bot - SewaBot</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="panel-wrap">
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar">
+    <a href="index.html" class="side-logo">SewaBot <span>⚡</span></a>
+    <nav class="side-menu">
+      <a href="#dashboard" class="active">🏠 Dashboard</a>
+      <a href="#bots">🤖 Bot Saya</a>
+      <a href="#statistik">📊 Statistik</a>
+      <a href="#broadcast">📢 Broadcast</a>
+      <a href="#" data-demo="Pengaturan">⚙️ Pengaturan</a>
+      <a href="#langganan">💳 Langganan</a>
+      <a href="#tiket">🎫 Tiket Support</a>
+      <a href="index.html" class="logout">🚪 Logout</a>
+    </nav>
+    <div class="side-foot">v1.0 • Server UP 🟢</div>
+  </aside>
+
+  <!-- ===================== AREA UTAMA ===================== -->
+  <main class="panel-main">
+
+    <div class="panel-topbar" id="dashboard">
+      <div>
+        <h1>Panel Kontrol Bot - SewaBot</h1>
+        <div class="sub">Selamat datang kembali 👋 Kelola semua bot Anda dalam satu panel.</div>
+      </div>
+      <div class="user-chip"><span class="av">F</span> Faiz • Paket Bisnis</div>
+    </div>
+
+    <!-- KARTU RINGKASAN -->
+    <div class="cards-grid">
+      <div class="card-kpi">
+        <div class="kpi-top"><span class="kpi-ico">🤖</span><span class="kpi-label">Bot Aktif</span></div>
+        <div class="kpi-value">3 / 5 bot</div>
+        <div class="kpi-sub danger">2 offline</div>
+      </div>
+      <div class="card-kpi k-blue">
+        <div class="kpi-top"><span class="kpi-ico">📨</span><span class="kpi-label">Pesan Hari Ini</span></div>
+        <div class="kpi-value">4.230 pesan</div>
+        <div class="kpi-sub up">↑ +18% hari ini</div>
+      </div>
+      <div class="card-kpi k-amber">
+        <div class="kpi-top"><span class="kpi-ico">👥</span><span class="kpi-label">User Berinteraksi</span></div>
+        <div class="kpi-value">128 pengguna</div>
+        <div class="kpi-sub up">↑ +32 baru</div>
+      </div>
+      <div class="card-kpi k-purple">
+        <div class="kpi-top"><span class="kpi-ico">⚡</span><span class="kpi-label">Uptime</span></div>
+        <div class="kpi-value">99.8%</div>
+        <div class="kpi-sub">30 hari terakhir</div>
+      </div>
+    </div>
+
+    <!-- DAFTAR BOT SAYA -->
+    <div class="panel" id="bots">
+      <div class="panel-head">
+        <h3>🤖 Daftar Bot Saya</h3>
+        <button class="btn btn-primary btn-sm" data-demo="Tambah Bot">+ Tambah Bot</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>NO</th><th>NAMA BOT</th><th>PLATFORM</th><th>NOMOR / USERNAME</th><th>STATUS</th><th>AKSI</th></tr>
+          </thead>
+          <tbody id="botBody">
+            <tr>
+              <td>1</td><td><strong>Bot Toko Baju</strong></td><td>WhatsApp</td><td>0812-xxxx-xxxx</td>
+              <td><span class="badge-st st-aktif">🟢 Aktif</span></td>
+              <td><a class="btn btn-primary btn-sm" href="kelola.html">Kelola</a></td>
+            </tr>
+            <tr>
+              <td>2</td><td><strong>Bot CS Otomatis</strong></td><td>WhatsApp</td><td>0857-xxxx-xxxx</td>
+              <td><span class="badge-st st-aktif">🟢 Aktif</span></td>
+              <td><a class="btn btn-ghost border btn-sm" href="kelola.html">Kelola</a></td>
+            </tr>
+            <tr>
+              <td>3</td><td><strong>Bot Promo Harian</strong></td><td>Telegram</td><td>@promoharian_bot</td>
+              <td><span class="badge-st st-aktif">🟢 Aktif</span></td>
+              <td><a class="btn btn-ghost border btn-sm" href="kelola.html">Kelola</a></td>
+            </tr>
+            <tr>
+              <td>4</td><td><strong>Bot Broadcast</strong></td><td>WhatsApp</td><td>0821-xxxx-xxxx</td>
+              <td><span class="badge-st st-off">🔴 Offline</span></td>
+              <td><button class="btn btn-wa btn-sm" data-toggle-bot="Nyalakan">Nyalakan</button></td>
+            </tr>
+            <tr>
+              <td>5</td><td><strong>Bot Laporan</strong></td><td>Discord</td><td>LaporanBot#4521</td>
+              <td><span class="badge-st st-non">⚪ Nonaktif</span></td>
+              <td><button class="btn btn-ghost border btn-sm" data-toggle-bot="Aktifkan">Aktifkan</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- GRAFIK PESAN -->
+    <div class="panel" id="statistik">
+      <div class="panel-head">
+        <h3>📈 Grafik Pesan (7 Hari Terakhir)</h3>
+        <span class="panel-note">pesan masuk vs pesan keluar</span>
+      </div>
+      <div class="chart-box">
+        <div class="chart-legend">
+          <span><i class="legend-dot" style="background:#10b981"></i>Pesan Masuk</span>
+          <span><i class="legend-dot" style="background:#2563eb"></i>Pesan Keluar</span>
+        </div>
+        <div class="chart" id="chart"><!-- diisi JS (SVG line chart) --></div>
+      </div>
+    </div>
+
+    <div class="dash-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
+      <!-- BROADCAST TERJADWAL -->
+      <div class="panel" id="broadcast">
+        <div class="panel-head">
+          <h3>📢 Broadcast Terjadwal</h3>
+          <button class="btn btn-primary btn-sm" data-demo="Broadcast Baru">+ Broadcast</button>
+        </div>
+        <div class="table-wrap">
+          <table style="min-width:0">
+            <thead>
+              <tr><th>JUDUL BROADCAST</th><th>TARGET</th><th>JADWAL KIRIM</th><th>STATUS</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Promo Akhir Bulan</strong></td><td>532 kontak</td><td>13 Okt 08.00</td>
+                <td><span class="badge-st st-proses">⏳ Pending</span></td>
+              </tr>
+              <tr>
+                <td><strong>Pengingat Pembayaran</strong></td><td>89 kontak</td><td>12 Okt 19.00</td>
+                <td><span class="badge-st st-ok">✅ Terkirim</span></td>
+              </tr>
+              <tr>
+                <td><strong>Flash Sale Weekend</strong></td><td>1.240 kontak</td><td>14 Okt 06.00</td>
+                <td><span class="badge-st st-proses">⏳ Pending</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TIKET SUPPORT -->
+      <div class="panel" id="tiket">
+        <div class="panel-head">
+          <h3>🎫 Tiket Support Aktif</h3>
+          <a class="btn btn-wa btn-sm" href="https://wa.me/6289698988955?text=Halo,%20saya%20butuh%20bantuan%20support." target="_blank" rel="noopener">Chat Support</a>
+        </div>
+        <div class="table-wrap">
+          <table style="min-width:0">
+            <thead>
+              <tr><th>ID TIKET</th><th>PELANGGAN</th><th>MASALAH</th><th>STATUS</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#TKT-089</td><td>Andi Wijaya</td><td>Bot tidak bisa connect</td>
+                <td><span class="badge-st st-baru">🔴 Baru</span></td>
+              </tr>
+              <tr>
+                <td>#TKT-088</td><td>Siti Rahayu</td><td>Broadcast gagal terkirim</td>
+                <td><span class="badge-st st-proses2">🟡 Proses</span></td>
+              </tr>
+              <tr>
+                <td>#TKT-087</td><td>Budi Setiawan</td><td>Minta tambah fitur</td>
+                <td><span class="badge-st st-selesai">✅ Selesai</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- INFO LANGGANAN -->
+    <div class="panel" id="langganan">
+      <div class="panel-head"><h3>💳 Info Langganan</h3></div>
+      <div class="sub-box">
+        <div class="sub-rows">
+          <div><b>Paket aktif</b> : <strong>BISNIS</strong></div>
+          <div><b>Masa aktif</b> : 12 Oktober - 12 November 2024</div>
+          <div><b>Sisa hari</b> : 31 hari</div>
+          <div><b>Bot tersedia</b> : 5 slot (3 digunakan)</div>
+        </div>
+        <div class="sub-actions">
+          <a class="btn btn-wa" href="https://wa.me/6289698988955?text=Halo,%20saya%20mau%20perpanjang%20langganan%20bot.%20Bisa%20dibantu?" target="_blank" rel="noopener">Perpanjang</a>
+          <a class="btn btn-primary" href="https://wa.me/6289698988955?text=Halo,%20saya%20mau%20upgrade%20ke%20Paket%20Pro.%20Bisa%20dibantu?" target="_blank" rel="noopener">Upgrade ke Pro</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<div class="toast" id="toast">✅ Berhasil</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MotoShop - Sparepart Motor Terlengkap & Terpercaya</title>
+<title>SewaBot - Sewa Bot Otomatis WhatsApp, Telegram & Discord</title>
+<meta name="description" content="Layanan sewa bot otomatis WhatsApp, Telegram, Discord. Aktif 24 jam, panel mudah, harga terjangkau.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,17 +12,17 @@
 <!-- ===================== NAVBAR ===================== -->
 <header class="navbar">
   <div class="container nav-inner">
-    <a href="#beranda" class="logo">MotoShop <span>⚙️</span></a>
+    <a href="index.html" class="logo">SewaBot <span>⚡</span></a>
     <nav class="nav-menu" id="navMenu">
       <a href="#beranda" class="active">Beranda</a>
-      <a href="#produk">Produk</a>
+      <a href="#layanan">Layanan</a>
       <a href="#harga">Harga</a>
-      <a href="#dashboard">Dashboard</a>
+      <a href="panel.html">Panel</a>
       <a href="#kontak">Kontak</a>
     </nav>
     <div class="nav-actions">
-      <button class="btn btn-ghost" type="button">Login</button>
-      <button class="btn btn-primary" type="button">Daftar</button>
+      <a class="btn btn-ghost" href="panel.html">Login Panel</a>
+      <a class="btn btn-primary" href="https://wa.me/6289698988955?text=Halo,%20saya%20mau%20daftar%20akun%20SewaBot.%20Bisa%20dibantu?" target="_blank" rel="noopener">Daftar Sekarang</a>
       <button class="burger" id="burger" aria-label="Menu">☰</button>
     </div>
   </div>
@@ -31,24 +32,31 @@
 <section class="hero" id="beranda">
   <div class="container hero-inner">
     <div class="hero-text">
-      <span class="badge">🔩 2.500+ Produk Original & Aftermarket</span>
-      <h1>Sparepart Motor <span>Terlengkap</span> &amp; Terpercaya</h1>
-      <p>Dapatkan sparepart original &amp; aftermarket dengan harga terbaik, pengiriman cepat.</p>
+      <span class="badge">⚡ 500+ bot aktif melayani pelanggan</span>
+      <h1>Sewa Bot Otomatis <span>Terbaik &amp; Terpercaya</span></h1>
+      <p>Bot WhatsApp, Telegram, Discord siap pakai. Aktif 24 jam, panel mudah, harga terjangkau.</p>
       <div class="hero-btns">
-        <a href="#produk" class="btn btn-light">Belanja Sekarang</a>
-        <a href="#harga" class="btn btn-outline-light">Lihat Katalog</a>
+        <a class="btn btn-light" href="https://wa.me/6289698988955?text=Halo,%20saya%20mau%20sewa%20bot.%20Bisa%20dibantu?" target="_blank" rel="noopener">Sewa Sekarang</a>
+        <a class="btn btn-outline-light" href="#harga">Lihat Paket</a>
       </div>
       <div class="hero-trust">
-        <span>✅ Original</span>
-        <span>🚚 Gratis Ongkir &gt; Rp300rb</span>
-        <span>🔄 Garansi 7 Hari</span>
+        <span>🟢 Aktif 24 Jam</span>
+        <span>⚡ Setup &lt; 10 Menit</span>
+        <span>🛡️ Anti Banned</span>
       </div>
     </div>
-    <div class="hero-art">
-      <div class="hero-card">
-        <div class="hero-emoji">🏍️</div>
-        <div class="hero-badge">⚙️</div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="bot-card">
+        <div class="bot-card-head"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><em>Panel SewaBot</em></div>
+        <div class="chat">
+          <div class="bubble in">Halo kak! 👋 Mau pesan apa hari ini?</div>
+          <div class="bubble out">Kak, ready stok ga?</div>
+          <div class="bubble in">Ready kak! Semua aman ✅ Bot balas otomatis 24 jam 🤖</div>
+        </div>
+        <div class="bot-card-foot">🟢 Bot aktif • auto-reply menyala</div>
       </div>
+      <div class="float-chip chip-1">📨 4.230 pesan hari ini</div>
+      <div class="float-chip chip-2">⚡ Uptime 99.9%</div>
     </div>
   </div>
 </section>
@@ -56,168 +64,160 @@
 <!-- ===================== STATS BAR ===================== -->
 <section class="stats">
   <div class="container stats-grid">
-    <div class="stat"><span class="stat-ico">📦</span><strong>2.500+</strong><small>Produk</small></div>
-    <div class="stat"><span class="stat-ico">✅</span><strong>10.000+</strong><small>Pelanggan</small></div>
-    <div class="stat"><span class="stat-ico">⭐</span><strong>4.9</strong><small>Rating</small></div>
-    <div class="stat"><span class="stat-ico">🚚</span><strong>Cepat</strong><small>Pengiriman</small></div>
+    <div class="stat"><span class="stat-ico">🤖</span><strong>500+</strong><small>Bot Aktif</small></div>
+    <div class="stat"><span class="stat-ico">👥</span><strong>2.000+</strong><small>Pelanggan</small></div>
+    <div class="stat"><span class="stat-ico">⚡</span><strong>99.9%</strong><small>Uptime</small></div>
+    <div class="stat"><span class="stat-ico">🕐</span><strong>24/7</strong><small>Support</small></div>
   </div>
 </section>
 
-<!-- ===================== KATEGORI ===================== -->
-<section class="section" id="kategori">
+<!-- ===================== KATEGORI LAYANAN ===================== -->
+<section class="section" id="layanan">
   <div class="container">
-    <h2 class="section-title">Kategori Sparepart</h2>
-    <div class="kategori-grid">
-      <button class="kat" data-filter="Ban &amp; Velg"><span>🛞</span>Ban &amp; Velg</button>
-      <button class="kat" data-filter="Mesin &amp; Oli"><span>🛢️</span>Mesin &amp; Oli</button>
-      <button class="kat" data-filter="Rem &amp; Kopling"><span>🛑</span>Rem &amp; Kopling</button>
-      <button class="kat" data-filter="Kelistrikan"><span>💡</span>Lampu &amp; Kelistrikan</button>
-      <button class="kat" data-filter="Body &amp; Aksesoris"><span>🎨</span>Body &amp; Aksesoris</button>
-      <button class="kat" data-filter="Filter"><span>🌀</span>Filter &amp; Karburator</button>
+    <h2 class="section-title">Pilih Jenis Bot</h2>
+    <div class="kat-grid">
+      <a class="kat" href="https://wa.me/6289698988955?text=Halo,%20saya%20mau%20sewa%20bot.%20Bisa%20dibantu?" target="_blank" rel="noopener">
+        <span class="kat-ico">🤖</span><strong>Bot WhatsApp</strong><small>Balas chat &amp; order otomatis 24 jam</small>
+      </a>
+      <a class="kat" href="https://wa.me/6289698988955?text=Halo,%20saya%20mau%20sewa%20bot.%20Bisa%20dibantu?" target="_blank" rel="noopener">
+        <span class="kat-ico">✈️</span><strong>Bot Telegram</strong><small>Bot grup &amp; channel siap pakai</small>
+      </a>
+      <a class="kat" href="https://wa.me/6289698988955?text=Halo,%20saya%20mau%20sewa%20bot.%20Bisa%20dibantu?" target="_blank" rel="noopener">
+        <span class="kat-ico">🎮</span><strong>Bot Discord</strong><small>Moderasi &amp; welcome otomatis</small>
+      </a>
+      <a class="kat" href="https://wa.me/6289698988955?text=Halo,%20saya%20mau%20sewa%20bot.%20Bisa%20dibantu?" target="_blank" rel="noopener">
+        <span class="kat-ico">🛒</span><strong>Bot Toko Online</strong><small>Katalog, order &amp; cek ongkir otomatis</small>
+      </a>
+      <a class="kat" href="https://wa.me/6289698988955?text=Halo,%20saya%20mau%20sewa%20bot.%20Bisa%20dibantu?" target="_blank" rel="noopener">
+        <span class="kat-ico">📢</span><strong>Bot Broadcast</strong><small>Kirim massal aman &amp; terjadwal</small>
+      </a>
+      <a class="kat" href="https://wa.me/6289698988955?text=Halo,%20saya%20mau%20sewa%20bot.%20Bisa%20dibantu?" target="_blank" rel="noopener">
+        <span class="kat-ico">⚙️</span><strong>Bot Custom</strong><small>Fitur sesuai kebutuhan bisnis Anda</small>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ===================== PRODUK TERLARIS ===================== -->
-<section class="section section-alt" id="produk">
+<!-- ===================== PAKET / HARGA ===================== -->
+<section class="section section-alt" id="harga">
   <div class="container">
-    <div class="section-head">
-      <h2 class="section-title left">Produk Terlaris</h2>
-      <a href="#harga" class="link-more">Lihat semua →</a>
+    <h2 class="section-title">Paket Sewa Bot</h2>
+    <p class="section-sub">Semua paket termasuk hosting, update, dan akses panel kontrol.</p>
+
+    <div class="price-grid">
+      <!-- STARTER -->
+      <div class="price-card">
+        <div class="price-head">PAKET STARTER</div>
+        <div class="price-amount">Rp 50.000<small>/ bulan</small></div>
+        <ul class="price-features">
+          <li>✅ 1 Bot aktif</li>
+          <li>✅ 1.000 pesan/hari</li>
+          <li>✅ Panel basic</li>
+          <li class="f-no">❌ Auto reply</li>
+          <li class="f-no">❌ Broadcast</li>
+          <li class="f-no">❌ Custom fitur</li>
+          <li>✅ Support chat</li>
+        </ul>
+        <a class="btn btn-wa full" href="https://wa.me/6289698988955?text=Halo,%20saya%20mau%20sewa%20Bot%20Paket%20Starter.%20Bisa%20dibantu?" target="_blank" rel="noopener">Pilih Starter</a>
+      </div>
+
+      <!-- BISNIS -->
+      <div class="price-card popular">
+        <span class="pop-badge">⭐ POPULER</span>
+        <div class="price-head">PAKET BISNIS</div>
+        <div class="price-amount">Rp 150.000<small>/ bulan</small></div>
+        <ul class="price-features">
+          <li>✅ 5 Bot aktif</li>
+          <li>✅ 10.000 pesan/hari</li>
+          <li>✅ Panel lengkap</li>
+          <li>✅ Auto reply</li>
+          <li>✅ Broadcast</li>
+          <li class="f-no">❌ Custom fitur</li>
+          <li>✅ Support prioritas</li>
+        </ul>
+        <a class="btn btn-wa full" href="https://wa.me/6289698988955?text=Halo,%20saya%20mau%20sewa%20Bot%20Paket%20Bisnis.%20Bisa%20dibantu?" target="_blank" rel="noopener">Pilih Bisnis</a>
+      </div>
+
+      <!-- PRO -->
+      <div class="price-card">
+        <div class="price-head">PAKET PRO</div>
+        <div class="price-amount">Rp 350.000<small>/ bulan</small></div>
+        <ul class="price-features">
+          <li>✅ Unlimited Bot</li>
+          <li>✅ Unlimited pesan</li>
+          <li>✅ Panel premium</li>
+          <li>✅ Auto reply</li>
+          <li>✅ Broadcast</li>
+          <li>✅ Custom fitur</li>
+          <li>✅ Support 24/7 VIP</li>
+        </ul>
+        <a class="btn btn-wa full" href="https://wa.me/6289698988955?text=Halo,%20saya%20mau%20sewa%20Bot%20Paket%20Pro.%20Bisa%20dibantu?" target="_blank" rel="noopener">Pilih Pro</a>
+      </div>
     </div>
-    <div class="product-grid" id="productGrid"><!-- diisi JS --></div>
   </div>
 </section>
 
-<!-- ===================== HALAMAN HARGA ===================== -->
-<section class="section" id="harga">
+<!-- ===================== TABEL PERBANDINGAN ===================== -->
+<section class="section" id="perbandingan">
   <div class="container">
-    <h2 class="section-title">Daftar Harga Sparepart</h2>
-    <div class="filter-bar" id="filterBar">
-      <button class="chip active" data-cat="all">Semua</button>
-      <button class="chip" data-cat="Ban &amp; Velg">Ban</button>
-      <button class="chip" data-cat="Mesin &amp; Oli">Mesin</button>
-      <button class="chip" data-cat="Rem &amp; Kopling">Rem</button>
-      <button class="chip" data-cat="Kelistrikan">Kelistrikan</button>
-      <button class="chip" data-cat="Body &amp; Aksesoris">Body</button>
-    </div>
-
+    <h2 class="section-title">Perbandingan Lengkap Paket</h2>
     <div class="table-wrap">
-      <table class="price-table">
+      <table class="compare-table">
         <thead>
           <tr>
-            <th>NO</th><th>NAMA PRODUK</th><th>KATEGORI</th>
-            <th>MEREK</th><th>HARGA</th><th>STATUS</th>
+            <th>FITUR</th><th>STARTER</th><th class="col-pop">BISNIS</th><th>PRO</th>
           </tr>
         </thead>
-        <tbody id="priceBody"><!-- diisi JS --></tbody>
+        <tbody>
+          <tr><td>Jumlah Bot</td><td>1</td><td class="col-pop">5</td><td>Unlimited</td></tr>
+          <tr><td>Pesan per Hari</td><td>1.000</td><td class="col-pop">10.000</td><td>Unlimited</td></tr>
+          <tr><td>Auto Reply</td><td><span class="no">❌</span></td><td class="col-pop"><span class="yes">✅</span></td><td><span class="yes">✅</span></td></tr>
+          <tr><td>Broadcast Massal</td><td><span class="no">❌</span></td><td class="col-pop"><span class="yes">✅</span></td><td><span class="yes">✅</span></td></tr>
+          <tr><td>Scheduler / Jadwal Kirim</td><td><span class="no">❌</span></td><td class="col-pop"><span class="yes">✅</span></td><td><span class="yes">✅</span></td></tr>
+          <tr><td>Anti Banned Protection</td><td><span class="no">❌</span></td><td class="col-pop"><span class="yes">✅</span></td><td><span class="yes">✅</span></td></tr>
+          <tr><td>Custom Prefix Command</td><td><span class="no">❌</span></td><td class="col-pop"><span class="no">❌</span></td><td><span class="yes">✅</span></td></tr>
+          <tr><td>Integrasi API Sendiri</td><td><span class="no">❌</span></td><td class="col-pop"><span class="no">❌</span></td><td><span class="yes">✅</span></td></tr>
+          <tr><td>Panel Control Lengkap</td><td>Basic</td><td class="col-pop">Lengkap</td><td>Premium</td></tr>
+          <tr><td>Laporan &amp; Statistik</td><td><span class="no">❌</span></td><td class="col-pop"><span class="yes">✅</span></td><td><span class="yes">✅</span></td></tr>
+          <tr><td>Support</td><td>Chat</td><td class="col-pop">Prioritas</td><td>24/7 VIP</td></tr>
+          <tr><td>Uptime Guarantee</td><td>99%</td><td class="col-pop">99.5%</td><td>99.9%</td></tr>
+        </tbody>
       </table>
     </div>
-  </div>
-</section>
-
-<!-- ===================== DASHBOARD ADMIN ===================== -->
-<section class="section section-alt" id="dashboard">
-  <div class="container">
-    <div class="dash-head">
-      <h2 class="section-title left">Dashboard - MotoShop Admin</h2>
-      <span class="dash-pill">🔒 Admin Panel</span>
-    </div>
-
-    <!-- Kartu ringkasan -->
-    <div class="cards-grid">
-      <div class="card-kpi k-green">
-        <div class="kpi-top"><span class="kpi-ico">💰</span><span class="kpi-label">Total Omset</span></div>
-        <div class="kpi-value">Rp 48.250.000</div>
-        <div class="kpi-sub up">↑ +12% bulan</div>
+    <div class="cta-strip">
+      <div>
+        <strong>Masih ragu memilih paket?</strong>
+        <p>Konsultasikan kebutuhan bot bisnisis Anda — gratis, dibalas cepat!</p>
       </div>
-      <div class="card-kpi k-blue">
-        <div class="kpi-top"><span class="kpi-ico">📦</span><span class="kpi-label">Total Produk</span></div>
-        <div class="kpi-value">2.547 item</div>
-        <div class="kpi-sub warn">32 hampir habis</div>
-      </div>
-      <div class="card-kpi k-amber">
-        <div class="kpi-top"><span class="kpi-ico">🛒</span><span class="kpi-label">Pesanan</span></div>
-        <div class="kpi-value">128 pesanan</div>
-        <div class="kpi-sub warn">14 pending</div>
-      </div>
-      <div class="card-kpi k-purple">
-        <div class="kpi-top"><span class="kpi-ico">👥</span><span class="kpi-label">Pelanggan</span></div>
-        <div class="kpi-value">1.034 orang</div>
-        <div class="kpi-sub up">↑ +8% bulan ini</div>
-      </div>
-    </div>
-
-    <!-- Grafik -->
-    <div class="panel">
-      <div class="panel-head">
-        <h3>📈 Grafik Penjualan (Mingguan)</h3>
-        <span class="panel-note">7 hari terakhir</span>
-      </div>
-      <div class="chart" id="chart"><!-- diisi JS --></div>
-    </div>
-
-    <div class="dash-2col">
-      <!-- Pesanan terbaru -->
-      <div class="panel">
-        <div class="panel-head"><h3>🧾 Pesanan Terbaru</h3></div>
-        <div class="table-wrap">
-          <table class="order-table">
-            <thead>
-              <tr><th>ID ORDER</th><th>PELANGGAN</th><th>PRODUK</th><th>TOTAL</th><th>STATUS</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>#ORD-128</td><td>Budi Santoso</td><td>Ban IRC + Oli</td><td>Rp250.000</td><td><span class="st st-proses">⏳ Proses</span></td></tr>
-              <tr><td>#ORD-127</td><td>Rina Marlina</td><td>Kampas Rem Set</td><td>Rp170.000</td><td><span class="st st-ok">✅ Selesai</span></td></tr>
-              <tr><td>#ORD-126</td><td>Ahmad Fauzi</td><td>Busi NGK x3</td><td>Rp105.000</td><td><span class="st st-kirim">🚚 Kirim</span></td></tr>
-              <tr><td>#ORD-125</td><td>Dewi Susanti</td><td>Lampu LED H4</td><td>Rp95.000</td><td><span class="st st-ok">✅ Selesai</span></td></tr>
-              <tr><td>#ORD-124</td><td>Hendra Gunawan</td><td>Filter K&amp;N + Oli</td><td>Rp185.000</td><td><span class="st st-proses">⏳ Proses</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- Stok menipis -->
-      <div class="panel">
-        <div class="panel-head"><h3>⚠️ Produk Stok Menipis</h3></div>
-        <ul class="stock-list">
-          <li>
-            <div class="stock-info"><strong>Kampas Kopling Set (TDR)</strong><div class="bar"><i style="width:16%"></i></div></div>
-            <span class="stock-tag warn">sisa 5 pcs ⚠️</span>
-          </li>
-          <li>
-            <div class="stock-info"><strong>Aki Yuasa YTZ5S</strong><div class="bar"><i class="danger" style="width:7%"></i></div></div>
-            <span class="stock-tag danger">sisa 2 pcs 🔴</span>
-          </li>
-          <li>
-            <div class="stock-info"><strong>Rantai RK 428 Gold</strong><div class="bar"><i style="width:10%"></i></div></div>
-            <span class="stock-tag warn">sisa 3 pcs ⚠️</span>
-          </li>
-        </ul>
-        <div class="stock-note">Klik produk untuk melakukan restock otomatis.</div>
-      </div>
+      <a class="btn btn-wa" href="https://wa.me/6289698988955?text=Halo,%20saya%20butuh%20bantuan%20support." target="_blank" rel="noopener">💬 Konsultasi Gratis</a>
     </div>
   </div>
 </section>
 
 <!-- ===================== KONTAK ===================== -->
-<section class="section" id="kontak">
+<section class="section section-alt" id="kontak">
   <div class="container contact-grid">
     <div>
-      <h2 class="section-title left">Kontak Kami</h2>
-      <p class="muted">Butuh bantuan memilih sparepart yang cocok untuk motormu? Tim kami siap membantu.</p>
+      <h2 class="section-title left">Kontak &amp; Support</h2>
+      <p class="muted">Tim support kami siap membantu 24 jam setiap hari. Chat langsung via WhatsApp untuk respon tercepat.</p>
       <ul class="contact-list">
-        <li>📍 Jl. Raya Motor No.88, Jakarta</li>
-        <li>📞 0812-3456-7890</li>
-        <li>📧 info@motoshop.id</li>
-        <li>🕐 Jam: Senin-Sabtu 08.00 - 20.00</li>
+        <li>💬 WhatsApp: <a href="https://wa.me/6289698988955" target="_blank" rel="noopener">+62 896-9898-8955</a></li>
+        <li>🕐 Support: 24 Jam / 7 Hari</li>
+        <li>⚡ Rata-rata balasan &lt; 5 menit</li>
+        <li>🛡️ Garansi bot aktif &amp; aman</li>
       </ul>
+      <div class="hero-btns" style="margin-top:18px">
+        <a class="btn btn-wa" href="https://wa.me/6289698988955?text=Halo,%20saya%20butuh%20bantuan%20support." target="_blank" rel="noopener">💬 Hubungi Support</a>
+        <a class="btn btn-ghost border" href="panel.html">🔓 Login Panel</a>
+      </div>
     </div>
-    <form class="contact-form" onsubmit="event.preventDefault();this.reset();alert('Pesan terkirim! Terima kasih.');">
+    <form class="contact-form" onsubmit="event.preventDefault();this.reset();toast('Pesan terkirim! Tim kami akan menghubungi Anda.');">
+      <h3>Kirim Pesan Cepat</h3>
       <input type="text" placeholder="Nama Anda" required>
-      <input type="email" placeholder="Email Anda" required>
-      <textarea rows="4" placeholder="Tulis pesan..." required></textarea>
-      <button class="btn btn-primary" type="submit">Kirim Pesan</button>
+      <input type="text" placeholder="Nomor WhatsApp Anda" required>
+      <textarea rows="4" placeholder="Tulis kebutuhan bot Anda..." required></textarea>
+      <button class="btn btn-primary full" type="submit">Kirim Pesan</button>
+      <small class="muted">Pesan akan diteruskan ke tim support SewaBot.</small>
     </form>
   </div>
 </section>
@@ -226,36 +226,34 @@
 <footer class="footer">
   <div class="container footer-grid">
     <div>
-      <div class="logo f-logo">MotoShop <span>⚙️</span></div>
-      <p>Toko Sparepart Motor Terpercaya</p>
-      <small>© 2024 MotoShop. All rights reserved.</small>
+      <div class="logo f-logo">SewaBot <span>⚡</span></div>
+      <p>Layanan sewa bot otomatis terpercaya</p>
+      <small>© 2024 SewaBot. All rights reserved.</small>
     </div>
     <div>
-      <h4>Navigasi</h4>
-      <a href="#beranda">Beranda</a>
-      <a href="#produk">Produk</a>
-      <a href="#harga">Harga</a>
-      <a href="#kontak">Tentang Kami</a>
+      <h4>Layanan</h4>
+      <a href="#layanan">Bot WhatsApp</a>
+      <a href="#layanan">Bot Telegram</a>
+      <a href="#layanan">Bot Discord</a>
+      <a href="#layanan">Bot Custom</a>
     </div>
     <div>
-      <h4>Kategori</h4>
-      <a href="#kategori">Ban &amp; Velg</a>
-      <a href="#kategori">Mesin &amp; Oli</a>
-      <a href="#kategori">Rem &amp; Kopling</a>
-      <a href="#kategori">Kelistrikan</a>
-      <a href="#kategori">Body &amp; Aksesoris</a>
+      <h4>Panel</h4>
+      <a href="panel.html">Login Panel</a>
+      <a href="https://wa.me/6289698988955?text=Halo,%20saya%20mau%20daftar%20akun%20SewaBot.%20Bisa%20dibantu?" target="_blank" rel="noopener">Daftar Akun</a>
+      <a href="panel.html#statistik">Status Server</a>
+      <a href="https://wa.me/6289698988955?text=Halo,%20saya%20butuh%20bantuan%20support." target="_blank" rel="noopener">Dokumentasi API</a>
     </div>
     <div>
-      <h4>Kontak</h4>
-      <p>📍 Jl. Raya Motor No.88, Jakarta</p>
-      <p>📞 0812-3456-7890</p>
-      <p>📧 info@motoshop.id</p>
-      <p>🕐 Jam: Senin-Sabtu 08.00 - 20.00</p>
+      <h4>Kontak &amp; Support</h4>
+      <p>💬 WhatsApp: +62 896-9898-8955</p>
+      <p><a href="https://wa.me/6289698988955" target="_blank" rel="noopener">wa.me/6289698988955</a></p>
+      <p>🕐 Support: 24 Jam / 7 Hari</p>
     </div>
   </div>
 </footer>
 
-<div class="toast" id="toast">✅ Ditambahkan ke keranjang</div>
+<div class="toast" id="toast">✅ Berhasil</div>
 
 <script src="script.js"></script>
 </body>
