@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MotoShop - Sparepart Motor Terlengkap & Terpercaya</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="#beranda" class="logo">MotoShop <span>⚙️</span></a>
+    <nav class="nav-menu" id="navMenu">
+      <a href="#beranda" class="active">Beranda</a>
+      <a href="#produk">Produk</a>
+      <a href="#harga">Harga</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="btn btn-ghost" type="button">Login</button>
+      <button class="btn btn-primary" type="button">Daftar</button>
+      <button class="burger" id="burger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="beranda">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <span class="badge">🔩 2.500+ Produk Original & Aftermarket</span>
+      <h1>Sparepart Motor <span>Terlengkap</span> &amp; Terpercaya</h1>
+      <p>Dapatkan sparepart original &amp; aftermarket dengan harga terbaik, pengiriman cepat.</p>
+      <div class="hero-btns">
+        <a href="#produk" class="btn btn-light">Belanja Sekarang</a>
+        <a href="#harga" class="btn btn-outline-light">Lihat Katalog</a>
+      </div>
+      <div class="hero-trust">
+        <span>✅ Original</span>
+        <span>🚚 Gratis Ongkir &gt; Rp300rb</span>
+        <span>🔄 Garansi 7 Hari</span>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="hero-card">
+        <div class="hero-emoji">🏍️</div>
+        <div class="hero-badge">⚙️</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STATS BAR ===================== -->
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat"><span class="stat-ico">📦</span><strong>2.500+</strong><small>Produk</small></div>
+    <div class="stat"><span class="stat-ico">✅</span><strong>10.000+</strong><small>Pelanggan</small></div>
+    <div class="stat"><span class="stat-ico">⭐</span><strong>4.9</strong><small>Rating</small></div>
+    <div class="stat"><span class="stat-ico">🚚</span><strong>Cepat</strong><small>Pengiriman</small></div>
+  </div>
+</section>
+
+<!-- ===================== KATEGORI ===================== -->
+<section class="section" id="kategori">
+  <div class="container">
+    <h2 class="section-title">Kategori Sparepart</h2>
+    <div class="kategori-grid">
+      <button class="kat" data-filter="Ban &amp; Velg"><span>🛞</span>Ban &amp; Velg</button>
+      <button class="kat" data-filter="Mesin &amp; Oli"><span>🛢️</span>Mesin &amp; Oli</button>
+      <button class="kat" data-filter="Rem &amp; Kopling"><span>🛑</span>Rem &amp; Kopling</button>
+      <button class="kat" data-filter="Kelistrikan"><span>💡</span>Lampu &amp; Kelistrikan</button>
+      <button class="kat" data-filter="Body &amp; Aksesoris"><span>🎨</span>Body &amp; Aksesoris</button>
+      <button class="kat" data-filter="Filter"><span>🌀</span>Filter &amp; Karburator</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRODUK TERLARIS ===================== -->
+<section class="section section-alt" id="produk">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title left">Produk Terlaris</h2>
+      <a href="#harga" class="link-more">Lihat semua →</a>
+    </div>
+    <div class="product-grid" id="productGrid"><!-- diisi JS --></div>
+  </div>
+</section>
+
+<!-- ===================== HALAMAN HARGA ===================== -->
+<section class="section" id="harga">
+  <div class="container">
+    <h2 class="section-title">Daftar Harga Sparepart</h2>
+    <div class="filter-bar" id="filterBar">
+      <button class="chip active" data-cat="all">Semua</button>
+      <button class="chip" data-cat="Ban &amp; Velg">Ban</button>
+      <button class="chip" data-cat="Mesin &amp; Oli">Mesin</button>
+      <button class="chip" data-cat="Rem &amp; Kopling">Rem</button>
+      <button class="chip" data-cat="Kelistrikan">Kelistrikan</button>
+      <button class="chip" data-cat="Body &amp; Aksesoris">Body</button>
+    </div>
+
+    <div class="table-wrap">
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>NO</th><th>NAMA PRODUK</th><th>KATEGORI</th>
+            <th>MEREK</th><th>HARGA</th><th>STATUS</th>
+          </tr>
+        </thead>
+        <tbody id="priceBody"><!-- diisi JS --></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DASHBOARD ADMIN ===================== -->
+<section class="section section-alt" id="dashboard">
+  <div class="container">
+    <div class="dash-head">
+      <h2 class="section-title left">Dashboard - MotoShop Admin</h2>
+      <span class="dash-pill">🔒 Admin Panel</span>
+    </div>
+
+    <!-- Kartu ringkasan -->
+    <div class="cards-grid">
+      <div class="card-kpi k-green">
+        <div class="kpi-top"><span class="kpi-ico">💰</span><span class="kpi-label">Total Omset</span></div>
+        <div class="kpi-value">Rp 48.250.000</div>
+        <div class="kpi-sub up">↑ +12% bulan</div>
+      </div>
+      <div class="card-kpi k-blue">
+        <div class="kpi-top"><span class="kpi-ico">📦</span><span class="kpi-label">Total Produk</span></div>
+        <div class="kpi-value">2.547 item</div>
+        <div class="kpi-sub warn">32 hampir habis</div>
+      </div>
+      <div class="card-kpi k-amber">
+        <div class="kpi-top"><span class="kpi-ico">🛒</span><span class="kpi-label">Pesanan</span></div>
+        <div class="kpi-value">128 pesanan</div>
+        <div class="kpi-sub warn">14 pending</div>
+      </div>
+      <div class="card-kpi k-purple">
+        <div class="kpi-top"><span class="kpi-ico">👥</span><span class="kpi-label">Pelanggan</span></div>
+        <div class="kpi-value">1.034 orang</div>
+        <div class="kpi-sub up">↑ +8% bulan ini</div>
+      </div>
+    </div>
+
+    <!-- Grafik -->
+    <div class="panel">
+      <div class="panel-head">
+        <h3>📈 Grafik Penjualan (Mingguan)</h3>
+        <span class="panel-note">7 hari terakhir</span>
+      </div>
+      <div class="chart" id="chart"><!-- diisi JS --></div>
+    </div>
+
+    <div class="dash-2col">
+      <!-- Pesanan terbaru -->
+      <div class="panel">
+        <div class="panel-head"><h3>🧾 Pesanan Terbaru</h3></div>
+        <div class="table-wrap">
+          <table class="order-table">
+            <thead>
+              <tr><th>ID ORDER</th><th>PELANGGAN</th><th>PRODUK</th><th>TOTAL</th><th>STATUS</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>#ORD-128</td><td>Budi Santoso</td><td>Ban IRC + Oli</td><td>Rp250.000</td><td><span class="st st-proses">⏳ Proses</span></td></tr>
+              <tr><td>#ORD-127</td><td>Rina Marlina</td><td>Kampas Rem Set</td><td>Rp170.000</td><td><span class="st st-ok">✅ Selesai</span></td></tr>
+              <tr><td>#ORD-126</td><td>Ahmad Fauzi</td><td>Busi NGK x3</td><td>Rp105.000</td><td><span class="st st-kirim">🚚 Kirim</span></td></tr>
+              <tr><td>#ORD-125</td><td>Dewi Susanti</td><td>Lampu LED H4</td><td>Rp95.000</td><td><span class="st st-ok">✅ Selesai</span></td></tr>
+              <tr><td>#ORD-124</td><td>Hendra Gunawan</td><td>Filter K&amp;N + Oli</td><td>Rp185.000</td><td><span class="st st-proses">⏳ Proses</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Stok menipis -->
+      <div class="panel">
+        <div class="panel-head"><h3>⚠️ Produk Stok Menipis</h3></div>
+        <ul class="stock-list">
+          <li>
+            <div class="stock-info"><strong>Kampas Kopling Set (TDR)</strong><div class="bar"><i style="width:16%"></i></div></div>
+            <span class="stock-tag warn">sisa 5 pcs ⚠️</span>
+          </li>
+          <li>
+            <div class="stock-info"><strong>Aki Yuasa YTZ5S</strong><div class="bar"><i class="danger" style="width:7%"></i></div></div>
+            <span class="stock-tag danger">sisa 2 pcs 🔴</span>
+          </li>
+          <li>
+            <div class="stock-info"><strong>Rantai RK 428 Gold</strong><div class="bar"><i style="width:10%"></i></div></div>
+            <span class="stock-tag warn">sisa 3 pcs ⚠️</span>
+          </li>
+        </ul>
+        <div class="stock-note">Klik produk untuk melakukan restock otomatis.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== KONTAK ===================== -->
+<section class="section" id="kontak">
+  <div class="container contact-grid">
+    <div>
+      <h2 class="section-title left">Kontak Kami</h2>
+      <p class="muted">Butuh bantuan memilih sparepart yang cocok untuk motormu? Tim kami siap membantu.</p>
+      <ul class="contact-list">
+        <li>📍 Jl. Raya Motor No.88, Jakarta</li>
+        <li>📞 0812-3456-7890</li>
+        <li>📧 info@motoshop.id</li>
+        <li>🕐 Jam: Senin-Sabtu 08.00 - 20.00</li>
+      </ul>
+    </div>
+    <form class="contact-form" onsubmit="event.preventDefault();this.reset();alert('Pesan terkirim! Terima kasih.');">
+      <input type="text" placeholder="Nama Anda" required>
+      <input type="email" placeholder="Email Anda" required>
+      <textarea rows="4" placeholder="Tulis pesan..." required></textarea>
+      <button class="btn btn-primary" type="submit">Kirim Pesan</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="logo f-logo">MotoShop <span>⚙️</span></div>
+      <p>Toko Sparepart Motor Terpercaya</p>
+      <small>© 2024 MotoShop. All rights reserved.</small>
+    </div>
+    <div>
+      <h4>Navigasi</h4>
+      <a href="#beranda">Beranda</a>
+      <a href="#produk">Produk</a>
+      <a href="#harga">Harga</a>
+      <a href="#kontak">Tentang Kami</a>
+    </div>
+    <div>
+      <h4>Kategori</h4>
+      <a href="#kategori">Ban &amp; Velg</a>
+      <a href="#kategori">Mesin &amp; Oli</a>
+      <a href="#kategori">Rem &amp; Kopling</a>
+      <a href="#kategori">Kelistrikan</a>
+      <a href="#kategori">Body &amp; Aksesoris</a>
+    </div>
+    <div>
+      <h4>Kontak</h4>
+      <p>📍 Jl. Raya Motor No.88, Jakarta</p>
+      <p>📞 0812-3456-7890</p>
+      <p>📧 info@motoshop.id</p>
+      <p>🕐 Jam: Senin-Sabtu 08.00 - 20.00</p>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">✅ Ditambahkan ke keranjang</div>
+
+<script src="script.js"></script>
+</body>
+</html>
